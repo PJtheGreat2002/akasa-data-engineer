@@ -1,0 +1,78 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+env/
+ENV/
+
+# Environment
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Data (optional - commit sample data only)
+data/processed/
+data/raw/*.csv
+data/raw/*.xml
+
+# Database
+*.db
+*.sqlite3
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Docker volumes
+docker-compose.yml
+docker-compose.local.yml
+.dockerignore
+
+# API keys and secrets
+secrets/
+secret.json
+credentials.json
+*.secret
+api_keys.txt
+
+
+# Keep example/template files
+!.env.example
+
+# Keep documentation
+!docs/
+!*.md
+!README.md
+!LICENSE
