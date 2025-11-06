@@ -228,7 +228,6 @@ akasa-data-pipeline/
 │   ├── database/                  # Database operations
 │   │   ├── __init__.py
 │   │   ├── db_manager.py         # Connection manager
-│   │   
 │   │
 │   ├── kpis/                      # KPI calculation engines
 │   │   ├── __init__.py
@@ -246,11 +245,6 @@ akasa-data-pipeline/
 │   ├── 2_📈_KPI_Analytics.py     # KPI analytics
 │   ├── 3_⚙️_Data_Management.py   # Data management
 │   └── 4_📋_System_Logs.py       # System logs
-│
-├── tests/                         # Test files
-│   ├── test_loaders.py
-│   ├── test_kpis.py
-│   └── test_setup.py
 │
 ├── logs/                          # Application logs
 │   └── app_YYYYMMDD.log
@@ -366,8 +360,8 @@ DB_PORT=3306
 DB_NAME=database_name
 DB_USER=username
 DB_PASSWORD=password
-DB_POOL_SIZE=5
-DB_MAX_OVERFLOW=10
+DB_POOL_SIZE=int
+DB_MAX_OVERFLOW=int
 
 # Application Settings
 LOG_LEVEL=INFO
@@ -409,11 +403,6 @@ python test_loaders.py
 
 # Test KPI engines
 python test_kpis.py
-```
-
-### Unit Tests (Future)
-```bash
-pytest tests/ -v
 ```
 
 ---
