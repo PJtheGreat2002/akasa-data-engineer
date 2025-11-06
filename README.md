@@ -129,7 +129,7 @@ docker-compose up -d
 docker-compose ps
 
 # Check database tables
-docker exec -it akasa_mysql mysql -uakasa_user -pakasa_pass akasa_db -e "SHOW TABLES;"
+docker exec -it akasa_mysql mysql -uyour_username -pyour_password akasa_db -e "SHOW TABLES;"
 ```
 
 ### 6. Load Sample Data (Optional)
@@ -212,12 +212,10 @@ akasa-data-pipeline/
 ├── config/
 │   ├── __init__.py
 │   ├── config.py                  # Application configuration
-│   └── db_config.py               # Database configuration
-│
+│  
 ├── data/
 │   ├── raw/                       # Input CSV/XML files
 │   ├── processed/                 # Processed data cache
-│   └── samples/                   # Sample data
 │
 ├── src/
 │   ├── __init__.py
@@ -227,15 +225,10 @@ akasa-data-pipeline/
 │   │   ├── csv_loader.py         # CSV file loader
 │   │   └── xml_loader.py         # XML file loader
 │   │
-│   ├── transformation/            # Data transformation
-│   │   ├── __init__.py
-│   │   ├── data_cleaner.py       # Data cleaning logic
-│   │   └── data_validator.py     # Data validation
-│   │
 │   ├── database/                  # Database operations
 │   │   ├── __init__.py
 │   │   ├── db_manager.py         # Connection manager
-│   │   └── db_operations.py      # CRUD operations
+│   │   
 │   │
 │   ├── kpis/                      # KPI calculation engines
 │   │   ├── __init__.py
@@ -246,7 +239,6 @@ akasa-data-pipeline/
 │   └── utils/                     # Utility modules
 │       ├── __init__.py
 │       ├── logger.py             # Logging configuration
-│       ├── cache_manager.py      # Caching utilities
 │       └── validators.py         # Common validators
 │
 ├── pages/                         # Streamlit pages
@@ -265,8 +257,7 @@ akasa-data-pipeline/
 │
 └── docs/                          # Documentation
     ├── DESIGN.md                 # System design
-    ├── API.md                    # API documentation
-    └── DEPLOYMENT.md             # Deployment guide
+    └── QUICKSTART.md             # Quickstart
 ```
 
 ---
@@ -372,9 +363,9 @@ LIMIT 10
 # Database Configuration
 DB_HOST=localhost
 DB_PORT=3306
-DB_NAME=akasa_db
-DB_USER=akasa_user
-DB_PASSWORD=akasa_pass
+DB_NAME=database_name
+DB_USER=username
+DB_PASSWORD=password
 DB_POOL_SIZE=5
 DB_MAX_OVERFLOW=10
 
@@ -568,21 +559,6 @@ docker-compose -f docker-compose.prod.yml up -d
 4. Configure secrets
 5. Deploy
 
-#### AWS/GCP/Azure
-Refer to `docs/DEPLOYMENT.md` for cloud-specific instructions
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
 ---
 
 ## 📝 License
@@ -593,7 +569,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👥 Authors
 
-- **Your Name** - *Initial work* - [YourGitHub](https://github.com/yourusername)
+- **Pratham Jain** - *Initial work* - [YourGitHub](https://github.com/PJtheGreat2002)
 
 ---
 
@@ -608,9 +584,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-**Project Link**: [https://github.com/yourusername/akasa-data-pipeline](https://github.com/yourusername/akasa-data-pipeline)
-
-**Email**: your.email@example.com
+**Project Link**: [https://github.com/yourusername/akasa-data-engineer](https://github.com/yourusername/akasa-data-engineer)
 
 ---
 
